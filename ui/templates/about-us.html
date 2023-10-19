@@ -1,0 +1,110 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} About {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="/static/assets/css/about-us.css" />
+{% endblock stylesheets %}
+
+{% block content %}
+    
+    <div class="yoo-content yoo-style1">
+
+        <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="responsive-container-block bigContainer">
+                    <div class="responsive-container-block bigContainer">
+                        <div class="responsive-container-block Container">
+                          <div class="imgContainer">
+                            <img class="blueDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw3.svg">
+                            <img class="mainImg" src="/static/assets/img/signup/ai_music_00.jpg">
+                          </div>
+                          <div class="responsive-container-block textSide">
+                            <p class="text-blk heading">
+                              About Us
+                            </p>
+                            <p class="text-blk subHeading">
+                            The project was carried out during the completion of the thesis at Vietnam-Germany University. The goal of the project is to create an AI agent that can generate music by transfering style using VAE-Transformer architecture. 
+                            The author expressed his sincere thanks to the warm guidance of Dr. Dinh Quang Vinh and Dr. Ngoc Tran Hong.
+                            </p>
+                            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                              <div class="cardImgContainer">
+                                <img class="cardImg" src="/static/assets/img/contact/ava_00.jpg">
+                              </div>
+                              <div class="cardText">
+                                <p class="text-blk cardHeading">
+                                  Le Duc Minh - 16669
+                                </p>
+                                <p class="text-blk cardSubHeading">
+                                    Me
+                                </p>
+                              </div>
+                            </div>
+                            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                              <div class="cardImgContainer">
+                                <img class="cardImg" src="/static/assets/img/contact/advisor_00.jpg">
+                              </div>
+                              <div class="cardText">
+                                <p class="text-blk cardHeading">
+                                  Dr.Dinh Quang Vinh
+                                </p>
+                                <p class="text-blk cardSubHeading">
+                                  Advisor
+                                </p>
+                              </div>
+                            </div>
+                            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                              <div class="cardImgContainer">
+                                <img class="cardImg" src="/static/assets/img/contact/advisor_01.png">
+                              </div>
+                              <div class="cardText">
+                                <p class="text-blk cardHeading">
+                                  Dr.Tran Hong Ngoc
+                                </p>
+                                <p class="text-blk cardSubHeading">
+                                  Advisor
+                                </p>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- <img class="redDots" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/cw3.svg"> -->
+                          <hr/>
+                          <div class="redDots">
+                            Contact Me
+                            <br/>
+                            <a href="https://www.facebook.com/lee.minh.12177276" class="fab fa-facebook-f fa-2xk" style="color: #3b5998;padding: 20px;
+                                                                            font-size: 30px;
+                                                                            width: 50px;
+                                                                            text-align: center;
+                                                                            text-decoration: none;"></a>
+                            <a href="https://github.com/MinLee0210/NeuralNotes.git" class="fab fa-github fa-2x" style="color: #333333;padding: 20px;
+                                                                            font-size: 30px;
+                                                                            width: 50px;
+                                                                            text-align: center;
+                                                                            text-decoration: none;"></a>
+                            <a href="https://www.linkedin.com/in/minh-le-duc-a62863172/" class="fab fa-linkedin-in fa-2x" style="color: #0082ca;padding: 20px;
+                                                                            font-size: 30px;
+                                                                            width: 50px;
+                                                                            text-align: center;
+                                                                            text-decoration: none;"></a>
+                          </div>
+                        </div>
+                      </div>
+            </div>
+        </div>
+
+        <div class="yoo-height-b60 yoo-height-lg-b60"></div>
+
+        {% include 'includes/footer.html' %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

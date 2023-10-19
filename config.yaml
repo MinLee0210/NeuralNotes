@@ -1,0 +1,28 @@
+PROTOCOL: https://
+HOST: 0.0.0.0
+PORT_NUMBER: 8000
+
+COOKIE_AUTHORIZATION_NAME: access_token
+COOKIE_DOMAIN: localhost
+
+DATABASE: 
+  URI: mongodb://localhost:27017
+  name: NeuralNotes
+
+SALT: 16669-LeDucMinh
+SECRET_KEY: 875fec044d42ef5d6198f38313fb3f14a5173c7c9e764c3b39e6dab8fae272d6
+ALGORITHM: HS256
+ACCESS_TOKEN_EXPIRE_MINUTES: 60
+
+GOOGLE_CLIENT_ID: 318619377390-e871plbqu42dc40tjmj7o6qli6tjur68.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET: 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
+GOOGLE_CONF_URL: https://accounts.google.com/.well-known/openid-configuration
+
+
+AGENT:
+  path: agent\musemorphose
+  vocab_path: agent\pickles\remi_vocab_v2.pkl
+
+ROUTE:
+  resource: data\resource
+  results: data\results

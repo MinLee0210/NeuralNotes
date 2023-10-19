@@ -1,0 +1,79 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Details {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+
+{% block stylesheets %}
+<link id="mode-option" rel="stylesheet" type="text/css" href="/static/assets/css/rating.css" />
+<link id="mode-option" rel="stylesheet" type="text/css" href="/static/assets/css/feedback.css" />
+{% endblock stylesheets %}
+
+{% block content %}
+    
+    <div class="yoo-content yoo-style1">
+
+        <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="yoo-sectin-heading yoo-style1">
+                    </div>
+                    <div class="yoo-sectin-heading-left">
+                        <h1 class="yoo-section-title">Your song your soul!!</h1>
+                    </div>
+                    <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+                    <hr />
+                    <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+                    <div class="yoo-section-sub-title">
+                        <midi-player
+                            src="https://localhost:8000/music/{{filename}}"
+                            sound-font visualizer="#myVisualizer">
+                        </midi-player>
+                        <midi-visualizer type="piano-roll" id="myPianoRollVisualizer" 
+                        src="https://localhost:8000/music/{{filename}}">
+                    </midi-visualizer>
+                    </div>
+                    <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+                    <div class="float-container" style="display: grid;
+                                                        grid-template-columns: 1fr 1fr 1fr;
+                                                        grid-gap: 20px;">
+                        <div class="float-child" >
+                            <h3 class="yoo-section-title">{{filename}}</h3>
+                        </div>
+                        <div class="float-child" > </div>
+                        <div class="float-child">
+                             <div id="lidiA" class="lidiWrap">
+                            </div>
+                        </div>
+                    </div>
+                      <div class="container">
+                        <form action="/comment/{{filename}}" method="post">
+                          <div class="form-group" id="comment" class="comment">
+                            <textarea class="form-control status-box" rows="3" placeholder="What is your thought ... " name="comment"
+                                    style="width: 85%;"></textarea>
+                          </div>
+                          <button class="btn btn-primary">Feedback</button>
+                        </form>
+                      </div>
+                </div>
+            </div>
+            <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+
+        </div>
+
+        <div class="yoo-height-b60 yoo-height-lg-b60"></div>
+
+        {% include 'includes/footer.html' %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+    <script src="/static/assets/js/rating.js"></script>
+{% endblock javascripts %}

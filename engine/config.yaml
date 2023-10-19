@@ -1,0 +1,19 @@
+SECRET_KEY: 875fec044d42ef5d6198f38313fb3f14a5173c7c9e764c3b39e6dab8fae272d6
+ALGORITHM: HS256
+
+DTS_SRC: 
+  src_dir: agent\remi_dataset
+  leaf_polyph: agent\remi_dataset\attr_cls\polyph
+  leaf_rhythm: agent\remi_dataset\attr_cls\rhythm
+
+
+DTS_TGT: 
+  src_dir: datas\resource
+  leaf_polyph: datas\resource\attr_cls\polyph
+  leaf_rhythm: datas\resource\attr_cls\rhythm
+
+RECEIVE_DATA:
+  dir: data\receive
+
+RESULTS_DATA:
+  dir: dataset\results

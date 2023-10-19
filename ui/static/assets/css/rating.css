@@ -1,0 +1,30 @@
+/* (A) WRAPPER */
+.lidiWrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f3f3f3;
+}
+
+.lidiWrap.count { width: 250px; }
+
+/* (B) LIKE-DISLIKE BUTTONS */
+.lidiUp, .lidiDown {
+  width: 24px; height: 24px;
+  background-image: url(https://code-boxx.com/wp-content/uploads/2021/08/dis-like.png);
+  cursor: pointer;
+}
+.lidiDown { background-position: -48px; }
+.lidiUp.set { background-position: -24px; }
+.lidiDown.set { background-position: -72px; }
+
+.widget-wrap {
+  width: 800px; 
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+}

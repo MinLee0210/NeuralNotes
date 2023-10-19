@@ -1,0 +1,64 @@
+
+  <header class="yoo-header yoo-style1 yoo-sticky-menu">
+    <div class="yoo-main-header">
+      <div class="yoo-main-header-in">
+        <div class="yoo-main-header-left">
+          <a href="/" class="yoo-logo-link yoo-light-logo">
+              <img src="/static/assets/img/neural_notes_2.png" alt="logo-light" style="width: 90%; height: 90%;"/></a>
+          <!-- For Site Title -->
+          <!-- <span class="yoo-site-title">
+            <a href="index.html">Logo</a>
+          </span> -->
+        </div>
+        <div class="yoo-main-header-right">
+          <div class="yoo-nav-wrap yoo-fade-up">
+            <div class="yoo-nav-toggle">
+              <i class="material-icons-outlined">more_vert</i>
+            </div>
+            <nav class="yoo-nav yoo-desktop-nav">
+              <ul class="yoo-nav-list">
+                <li>
+                  <a href="/"><i class="material-icons-outlined">home</i> Home</a>
+                </li>
+                <li>
+                  <a href="gallery"><i class="material-icons-outlined">subscriptions</i> Gallery</a>
+                </li>
+                <li>
+                  <a href="about"><i class="material-icons-outlined">folder</i> About</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- .yoo-nav-wrap -->
+          <ul class="yoo-ex-nav yoo-style1 yoo-flex yoo-mp0">
+            <li>
+              <div class="yoo-toggle-body yoo-profile-nav yoo-style1">
+                <div class="yoo-toggle-btn yoo-profile-nav-btn">
+                  <div class="yoo-profile-nav-text">
+                    <span>Welcome</span>
+                    {%- if message -%}
+                      <h4> {{ message }} </h4>
+                    {% endif %}
+                  </div>
+                </div>
+                <ul class="yoo-dropdown yoo-style1">
+                  <!-- <li>
+                    <a href="#"><i class="material-icons-outlined">account_circle</i>My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="material-icons-outlined">settings</i>Settings</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="material-icons-outlined">help</i>Help</a>
+                  </li> -->
+                  <li class="yoo-dropdown-cta">
+                      <a href="/signin"><i class="material-icons-outlined">directions_run</i>Sign Out</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header><!-- .yoo-header -->

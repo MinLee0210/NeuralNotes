@@ -1,0 +1,56 @@
+data:
+    data_dir:         ./remi_dataset
+    train_split:      ./pickles/train_pieces.pkl
+    val_split:        ./pickles/val_pieces.pkl
+    test_split:       ./pickles/test_pieces.pkl
+    vocab_path:       ./pickles/remi_vocab_v2.pkl
+    max_bars:         16                 
+    enc_seqlen:       128
+    dec_seqlen:       1280               
+    batch_size:       4
+
+model:
+    enc_n_layer:      6
+    enc_n_head:       4
+    enc_d_model:      256
+    enc_d_ff:         1024
+    dec_n_layer:      6 # original: 12
+    dec_n_head:       4 # original: 8
+    dec_d_model:      256 # original: 512
+    dec_d_ff:         1024 # original: 2048
+    d_embed:          256 # original: 512
+    d_latent:         64 # original: 128
+    d_polyph_emb:     32 # original: 64
+    d_rfreq_emb:      32 # original: 64
+    cond_mode:        in-attn
+    gen_len:          1280
+    gen_mode:         ldpe
+    pretrained_params_path:      null
+    pretrained_optim_path:       null
+
+training:
+    device:           cuda:0
+    ckpt_dir:         ./ckpt/mm_small_v201.pt
+    trained_steps:    0
+    max_epochs:       1000
+    max_lr:           1.0e-4
+    min_lr:           5.0e-6
+    lr_warmup_steps:  200
+    lr_decay_steps:   150000
+    no_kl_steps:      10000
+    kl_cycle_steps:   5000
+    kl_max_beta:      1.0
+    free_bit_lambda:  0.25
+    constant_kl:      False
+    ckpt_interval:    50
+    log_interval:     10
+    val_interval:     50
+
+generate:
+    temperature:                1.2
+    nucleus_p:                  0.9
+    use_latent_sampling:        False
+    latent_sampling_var:        0.0
+    max_bars:                   16       # could be set to match the longest input piece during generation (inference)
+    dec_seqlen:                 1280     # could be set to match the longest input piece during generation (inference)
+    max_input_dec_seqlen:       1024     # should be set to equal to or less than `dec_seqlen` used during training

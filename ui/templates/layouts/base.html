@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="theme_bubble" />
+  <!-- Page Title -->
+  <title>
+    NeuralNotes - {% block title %}{% endblock %} | AppSeed
+  </title>
+
+  <!-- Favicon Icon -->
+  <link rel="icon" href="/static/assets/img/neural_notes_2_favicon.png">
+  
+  <!-- Plugins css -->
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/material-icons.css">
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/jqvmap.min.css" />
+
+  <!-- Specific Page CSS goes HERE  -->
+  {% block stylesheets %}{% endblock stylesheets %}
+
+  <link id="mode-option" rel="stylesheet" type="text/css" href="/static/assets/css/style.css" />
+  
+</head>
+
+<body>
+  <div class="yoo-height-b60 yoo-height-lg-b60"></div>
+
+  {% include 'includes/navigation.html' %}
+
+  {% include 'includes/sidebar.html' %}
+
+  {% block content %}{% endblock content %}
+
+  <!-- Scripts -->
+  <script src="/static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="/static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/js/Chart.min.js"></script>
+  <script src="/static/assets/js/chartjs.light.js"></script>
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}
+
+  <script src="/static/assets/js/smooth-scrollbar.js"></script>
+  <script src="/static/assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    
+  <div class="yoo-content yoo-style1">
+
+    <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="yoo-sectin-heading yoo-style1">
+            <div class="yoo-sectin-heading-left">
+              <h2 class="yoo-section-title">
+                <a target="_blank" rel="noopener noreferrer" 
+                   href="/">NeuralNotes</a>
+              </h2>
+            </div>
+          </div>
+          <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+          <hr />
+        </div>
+      </div>
+      <div class="yoo-height-b30 yoo-height-lg-b30"></div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="yoo-card yoo-style1">
+            <div class="yoo-card-heading">
+              <div class="yoo-card-heading-left">
+                <h2 class="yoo-card-title">Please Input your files here</h2>
+              </div>
+            </div>
+            <div class="yoo-card-body">
+              <div class="yoo-padd-lr-15">
+                <div class="yoo-padd-lr-15 yoo-card-content-height1" data-scrollbar>
+                  <div class="yoo-height-b20 yoo-height-lg-b20"></div>
+
+                  <div class="yoo-height-b20 yoo-height-lg-b20">
+                    <form method="post" enctype="multipart/form-data" action="/music">
+                      <div>
+                        <input type="file" id="file" name="file" accept=".mid, .MID" placeholder="eg. BACH1D.mid"/>
+                      </div>
+                      <div>
+                        <div class="yoo-height-b20 yoo-height-lg-b20"></div>
+                        <div style="text-align:center">  
+                          <button type="submit" name="upload" value="upload" id="upload" class="btn btn-block btn-dark"><i class="fa fa-fw fa-upload"></i>Upload</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <!-- <a href="#" class="yoo-btn yoo-style2"> <i class="yoo-plus">+</i> Add New Task</a> -->
+            </div>
+          </div>
+        </div><!-- .col -->
+        <div class="col-lg-6">
+          <div class="yoo-card yoo-style1">
+            <div class="yoo-card-heading">
+              <div class="yoo-card-heading-left">
+                <h2 class="yoo-card-title">Results here!!!</h2>
+              </div>
+            </div>
+            <div class="yoo-card-body">
+              <div class="yoo-padd-lr-15">
+                <div class="yoo-padd-lr-15 yoo-card-content-height1" data-scrollbar>
+                  <div class="yoo-height-b20 yoo-height-lg-b20"></div>
+                    <!-- RESULTS HERE -->
+                    {% if file_storage %}
+                      {% for file in file_storage %}
+                      <ul class="yoo-task-list yoo-style1 yoo-mp0">
+                         <li>
+                          <div class="yoo-task-text">
+                            <midi-player
+                              src="https://localhost:8000/music/{{file}}"
+                              sound-font visualizer="#myVisualizer">
+                            </midi-player>
+                            <div class="yoo-button-group yoo-style2">
+                              <a href="/music_detail/{{file}}" class="btn btn-primary">
+                                 See More
+                              </a> 
+                            </div>
+                          </div>
+                         </li> 
+                      </ul>
+                      {% endfor %}
+                    {% endif %}
+                  <div class="yoo-height-b20 yoo-height-lg-b20"></div>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div><!-- .col -->
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .container-fluid -->
+    
+    <div class="yoo-height-b60 yoo-height-lg-b60"></div>
+
+    {% include 'includes/footer.html' %}
+
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+  <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
+{% endblock javascripts %}
