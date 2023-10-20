@@ -1,4 +1,6 @@
 /agent/ckpt
 /agent/logs
-/data
+/data/examples
+/data/receive
+/data/results
 /certificate

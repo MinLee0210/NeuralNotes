@@ -2,3 +2,4 @@ Change name of pkl file from Canon in D into D:\UNI\Thesis\NeuralNotes\data\reso
 Change name of pkl file from Beautiful-in-white into D:\UNI\Thesis\NeuralNotes\data\resource\1696.pkl
 Change name of pkl file from Ode-To-Joy into D:\UNI\Thesis\NeuralNotes\data\resource\1697.pkl
 Change name of pkl file from Beautiful-in-white into D:\UNI\Thesis\NeuralNotes\data\resource\1723.pkl
+Change name of pkl file from Beautiful-in-white into D:\UNI\Thesis\VGU_Thesis_NeuralNotes\data\resource\1724.pkl

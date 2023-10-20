@@ -18,8 +18,8 @@ The author expressed his sincere thanks to the warm guidance of Dr. Dinh Quang V
     # If you do not use conda, you can substitute 2 follows line by those appropriate to your machine
 
     # Create environment and access to it
-    conda create --name musicgen
-    conda activate musicgen
+    conda create --name neuralnotes
+    conda activate neuralnotes
 
     # Install requirements
     pip install -r requirements.txt
@@ -43,9 +43,16 @@ For those who want to interact directly to model so that you guys can play with 
 2. Dr. Ngoc Tran Hong. 
 3. Le Duc Minh. 
 
+## Contact
+
+Gmail: 16669@student.vgu.edu.vn
+
+Linkedin: https://www.linkedin.com/in/minh-le-duc-a62863172/
 
 ## Note
 
 There are many variations to suit your environment. For example, the tokens for using Google's OAuth2 need to be updated to suit your needs. The data system I use is MongoDB, which you can change to suit your settings.
 
-There are many soundfonts that I have collected in /engine/soundfonts, you guyes can change to suit your settings. 
+There are many soundfonts that I have collected in /engine/soundfonts, you guys can change to suit your settings. 
+
+
